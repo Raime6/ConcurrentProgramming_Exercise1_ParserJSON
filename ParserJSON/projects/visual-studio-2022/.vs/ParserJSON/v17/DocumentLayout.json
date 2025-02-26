@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alumno\\Downloads\\projects\\visual-studio-2022\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{96614D82-7F09-4185-9588-BB049866819A}|ParserJSON.vcxproj|C:\\Users\\Alumno\\Downloads\\code\\JsonHandler.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96614D82-7F09-4185-9588-BB049866819A}|ParserJSON.vcxproj|C:\\Users\\Alumno\\Downloads\\code\\Asset.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96614D82-7F09-4185-9588-BB049866819A}|ParserJSON.vcxproj|C:\\Users\\Alumno\\Downloads\\code\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96614D82-7F09-4185-9588-BB049866819A}|ParserJSON.vcxproj|C:\\Users\\Alumno\\Downloads\\code\\BinaryWriter.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96614D82-7F09-4185-9588-BB049866819A}|ParserJSON.vcxproj|C:\\Users\\Alumno\\Downloads\\code\\BinaryWriter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JsonHandler.hpp",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\code\\JsonHandler.hpp",
+              "RelativeDocumentMoniker": "..\\..\\code\\JsonHandler.hpp",
+              "ToolTip": "C:\\Users\\Alumno\\Downloads\\code\\JsonHandler.hpp",
+              "RelativeToolTip": "..\\..\\code\\JsonHandler.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-19T14:48:05.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Asset.hpp",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\code\\Asset.hpp",
+              "RelativeDocumentMoniker": "..\\..\\code\\Asset.hpp",
+              "ToolTip": "C:\\Users\\Alumno\\Downloads\\code\\Asset.hpp",
+              "RelativeToolTip": "..\\..\\code\\Asset.hpp",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-19T14:41:27.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BinaryWriter.hpp",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\code\\BinaryWriter.hpp",
+              "RelativeDocumentMoniker": "..\\..\\code\\BinaryWriter.hpp",
+              "ToolTip": "C:\\Users\\Alumno\\Downloads\\code\\BinaryWriter.hpp",
+              "RelativeToolTip": "..\\..\\code\\BinaryWriter.hpp",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-19T13:56:04.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BinaryWriter.cpp",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\code\\BinaryWriter.cpp",
+              "RelativeDocumentMoniker": "..\\..\\code\\BinaryWriter.cpp",
+              "ToolTip": "C:\\Users\\Alumno\\Downloads\\code\\BinaryWriter.cpp",
+              "RelativeToolTip": "..\\..\\code\\BinaryWriter.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-19T13:55:53.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\Alumno\\Downloads\\code\\main.cpp",
+              "RelativeDocumentMoniker": "..\\..\\code\\main.cpp",
+              "ToolTip": "C:\\Users\\Alumno\\Downloads\\code\\main.cpp",
+              "RelativeToolTip": "..\\..\\code\\main.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAC0AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-19T13:28:09.316Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
