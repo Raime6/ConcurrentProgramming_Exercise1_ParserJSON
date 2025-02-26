@@ -10,6 +10,7 @@
 
 
 #include "Asset.hpp"
+#include "JsonHandler.hpp"
 
 
 
@@ -35,14 +36,17 @@ int main(int, const char * arguments [])
 	Reader reader;
 	StringStream ss("../../binaries/assets/users.1000.json");
 
-	// JSON Handler
-	Handler handler;
-
 	// Binary File
 	asset.initialize(arguments[0]);
-	ifstream binFile(asset.getAssetPath("binFile.bin"));
+	ofstream binFile(asset.getAssetPath("binFile.bin"));
+
+	// JSON Handler
+	JsonHandler handler(binFile);
 
 	// Parsing JSON File
 	reader.Parse(ss, handler);
 
+	binFile.close();
+
+	return 0;
 }
