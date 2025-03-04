@@ -7,6 +7,8 @@
 *
 **/
 
+#pragma once
+
 
 
 #include <cassert>
@@ -55,11 +57,18 @@ public:
 	}
 
 	template<>
+	bool put< uint64_t >(const uint64_t& value)
+	{
+		writer.write(reinterpret_cast<const char*> (&value), sizeof(uint64_t));
+		return good();
+	}
+
+	template<>
 	bool put< std::string >(const std::string& value)
 	{
 		std::vector<unsigned char> utf8_bytes(value.begin(), value.end());
 
-		uint32_t length = utf8_bytes.size();
+		size_t length = utf8_bytes.size();
 
 		put(length);
 
