@@ -35,10 +35,8 @@ int main(int, const char * arguments [])
 
 	// JSON File
 	Reader reader;
-	//StringStream ss("../../binaries/assets/users.1000.json");
-	//StringStream ss("../../binaries/assets/prueba.json");
 
-	ifstream jsonFile("../../binaries/assets/users.1000.json");
+	ifstream jsonFile("../../binaries/assets/prueba.json");
 	if (!jsonFile.is_open()) {
 		cout << "ERROR while opening JSON file." << endl;
 		return 1;
@@ -58,14 +56,14 @@ int main(int, const char * arguments [])
 	// Parsing JSON File
 	if (!reader.Parse(ss, jsonWriter)) {
 		cout << "ERROR while parsin the JSON file: " << reader.GetParseErrorCode() << endl;
-		cout << "Error position: " << reader.GetErrorOffset() << endl;
+		cout << "Error position: "					 << reader.GetErrorOffset()	   << endl;
 		return 1;
 	}
 
 
 
 	// Read Binary file
-	ifstream binInputFile(asset.getAssetPath("binFile.bin"), ifstream::binary);
+	/*ifstream binInputFile(asset.getAssetPath("binFile.bin"), ifstream::binary);
 	if (!binInputFile.is_open()) {
 		cout << "ERROR while opening binary file." << endl;
 		return 1;
@@ -73,7 +71,7 @@ int main(int, const char * arguments [])
 
 	JsonReader jsonReader(binInputFile);
 
-	jsonReader.read();
+	jsonReader.read();*/
 
 	return 0;
 }
