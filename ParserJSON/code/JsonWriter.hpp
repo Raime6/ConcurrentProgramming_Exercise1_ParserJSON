@@ -16,65 +16,78 @@
 
 
 
+using namespace std;
+
+
+
 namespace ParserJson
 {    
     class JsonWriter
     {
         private:
 
+            struct User
+            {
+                string  gender;
+                string    name;
+                string surname;
+                int        age;
+                string   email;
+                string country;
+            };
+    
+        private:
+
             BinaryWriter binaryWriter;
+
+            User user;
 
         public:
 
             JsonWriter(std::ostream& stream) : binaryWriter(stream) {};
 
+            void WriteUser();
+
         public:
 
             bool Null()
             {
-                return binaryWriter.put<uint8_t>(NULLVALUE);
+                return true;
             }
 
             bool Bool(bool boolean)
             {
-                binaryWriter.put<uint8_t>(BOOLEAN);
-                return binaryWriter.put<uint8_t>(boolean);
+                return true;
             }
 
             bool Int(int integer32)
             {
-                binaryWriter.put<uint8_t>(NUMBER);
-                return binaryWriter.put<uint32_t>(integer32);
+                return true;
             }
 
             bool Uint(unsigned uInteger32)
             {
-                binaryWriter.put<uint8_t>(NUMBER);
-                return binaryWriter.put<uint32_t>(uInteger32);
+                return true;
             }
 
             bool Int64(int64_t integer64)
             {
-                binaryWriter.put<uint8_t>(NUMBER);
-                return binaryWriter.put<uint64_t>(integer64);
+                return true;
             }
 
             bool Uint64(uint64_t uInteger64)
             {
-                binaryWriter.put<uint8_t>(NUMBER);
-                return binaryWriter.put<uint64_t>(uInteger64);
+                return true;
             }
 
             bool Double(double doubleNum)
             {
-                binaryWriter.put<uint8_t>(NUMBER);
-                return binaryWriter.put<uint64_t>(reinterpret_cast<uint64_t>(&doubleNum));
+                return true;
             }
 
             bool String(const char* str, size_t length, bool copy)
             {
-                binaryWriter.put<uint8_t>(STRING);
-                return binaryWriter.put<string>(str);
+                return true;
             }
 
             bool StartObject()
@@ -94,7 +107,7 @@ namespace ParserJson
 
             bool StartArray()
             {
-                return binaryWriter.put<uint8_t>(ARRAY);
+                return true;
             }
 
             bool EndArray(size_t elementCount)
@@ -104,8 +117,17 @@ namespace ParserJson
 
             bool RawNumber(const char* str, size_t length, bool copy)
             {
-                binaryWriter.put<uint8_t>(NUMBER);
-                return binaryWriter.put<string>(str);
+                return true;
             }
     };
+
+    inline void JsonWriter::WriteUser()
+    {
+        binaryWriter.put<string> (user. gender);
+        binaryWriter.put<string> (user.   name);
+        binaryWriter.put<string> (user.surname);
+        binaryWriter.put<uint8_t>(user.    age);
+        binaryWriter.put<string> (user.  email);
+        binaryWriter.put<string> (user.country);
+    }
 };

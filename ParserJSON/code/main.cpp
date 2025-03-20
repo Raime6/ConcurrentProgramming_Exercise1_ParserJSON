@@ -16,6 +16,7 @@
 
 
 #include "rapidjson/reader.h"
+#include <rapidjson/istreamwrapper.h>
 
 
 
@@ -26,7 +27,6 @@
 
 using namespace ParserJson;
 using namespace rapidjson;
-using namespace std;
 
 
 
@@ -42,9 +42,7 @@ int main(int, const char * arguments [])
 		return 1;
 	}
 
-	string jsonContent((istreambuf_iterator<char>(jsonFile)), istreambuf_iterator<char>());
-
-	StringStream ss(jsonContent.c_str());
+	IStreamWrapper isw(jsonFile);
 
 	// Binary File
 	asset.initialize(arguments[0]);
@@ -54,7 +52,7 @@ int main(int, const char * arguments [])
 	JsonWriter jsonWriter(binFile);
 
 	// Parsing JSON File
-	if (!reader.Parse(ss, jsonWriter)) {
+	if (!reader.Parse(isw, jsonWriter)) {
 		cout << "ERROR while parsin the JSON file: " << reader.GetParseErrorCode() << endl;
 		cout << "Error position: "					 << reader.GetErrorOffset()	   << endl;
 		return 1;
