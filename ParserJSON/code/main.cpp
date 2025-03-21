@@ -10,8 +10,7 @@
 
 
 #include "Asset.hpp"
-#include "JsonReader.hpp"
-#include "JsonWriter.hpp"
+#include "JsonToBinary.hpp"
 
 
 
@@ -36,7 +35,7 @@ int main(int, const char * arguments [])
 	// JSON File
 	Reader reader;
 
-	ifstream jsonFile("../../binaries/assets/prueba.json");
+	ifstream jsonFile("../../binaries/assets/users.1000.json");
 	if (!jsonFile.is_open()) {
 		cout << "ERROR while opening JSON file." << endl;
 		return 1;
@@ -49,27 +48,14 @@ int main(int, const char * arguments [])
 	ofstream binFile(asset.getAssetPath("binFile.bin"), ofstream::binary);
 
 	// JSON Handler
-	JsonWriter jsonWriter(binFile);
+	JsonToBinary jsonToBinary(binFile);
 
 	// Parsing JSON File
-	if (!reader.Parse(isw, jsonWriter)) {
+	if (!reader.Parse(isw, jsonToBinary)) {
 		cout << "ERROR while parsin the JSON file: " << reader.GetParseErrorCode() << endl;
 		cout << "Error position: "					 << reader.GetErrorOffset()	   << endl;
 		return 1;
 	}
-
-
-
-	// Read Binary file
-	/*ifstream binInputFile(asset.getAssetPath("binFile.bin"), ifstream::binary);
-	if (!binInputFile.is_open()) {
-		cout << "ERROR while opening binary file." << endl;
-		return 1;
-	}
-
-	JsonReader jsonReader(binInputFile);
-
-	jsonReader.read();*/
 
 	return 0;
 }

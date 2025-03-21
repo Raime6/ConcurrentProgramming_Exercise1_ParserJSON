@@ -26,16 +26,10 @@
     <ClInclude Include="..\..\code\BinaryWriter.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\JsonReader.hpp">
+    <ClInclude Include="..\..\code\JsonToBinary.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\..\code\BinaryReader.hpp">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\JsonWriter.hpp">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\code\JsonVariables.hpp">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,1 +1,58 @@
-{"age":28}
+{
+  "results": {
+    "gender": "female",
+    "name": {
+      "title": "Ms",
+      "first": "Pinja",
+      "last": "Takala"
+    },
+    "location": {
+      "street": {
+        "number": 4366,
+        "name": "Rotuaari"
+      },
+      "city": "Tuusula",
+      "state": "Northern Ostrobothnia",
+      "country": "Finland",
+      "postcode": 86687,
+      "coordinates": {
+        "latitude": "-29.9833",
+        "longitude": "70.8032"
+      },
+      "timezone": {
+        "offset": "+10:00",
+        "description": "Eastern Australia, Guam, Vladivostok"
+      }
+    },
+    "email": "pinja.takala@example.com",
+    "login": {
+      "uuid": "ceef6be6-d233-46cf-8ab5-660799d22363",
+      "username": "greengorilla458",
+      "password": "qian",
+      "salt": "jnnzW7pN",
+      "md5": "85fbf0b5f7cc92812620b0996fb2968d",
+      "sha1": "eb37369781baea8339925aca60cdf4ff8fd45e49",
+      "sha256": "db54a00a83dc885dc0ad8d5ff9c5b9a9c170b94030f3449fce21d157a9689db5"
+    },
+    "dob": {
+      "date": "1946-01-22T12:20:25.808Z",
+      "age": 79
+    },
+    "registered": {
+      "date": "2011-05-09T16:44:53.389Z",
+      "age": 13
+    },
+    "phone": "06-811-242",
+    "cell": "048-601-18-00",
+    "id": {
+      "name": "HETU",
+      "value": "NaNNA388undefined"
+    },
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/women/58.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/women/58.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/women/58.jpg"
+    },
+    "nat": "FI"
+  }
+}

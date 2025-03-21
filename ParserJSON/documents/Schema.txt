@@ -1,0 +1,9 @@
+gender    = STRING
+name      = STRING
+surname   = STRING
+age       = UINT8
+email     = STRING
+country   = STRING
+user      = gender, name, surname, age, email, country
+userCount = UINT32
+file      = userCount, user[userCount]
