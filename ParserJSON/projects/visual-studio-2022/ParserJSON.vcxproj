@@ -137,8 +137,8 @@
     <ClInclude Include="..\..\code\BinaryReader.hpp" />
     <ClInclude Include="..\..\code\BinaryWriter.hpp" />
     <ClInclude Include="..\..\code\JsonVariables.hpp" />
-    <ClInclude Include="..\..\code\JsonReader.hpp" />
     <ClInclude Include="..\..\code\JsonWriter.hpp" />
+    <ClInclude Include="..\..\code\JsonReader.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

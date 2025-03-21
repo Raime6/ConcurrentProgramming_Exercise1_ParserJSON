@@ -11,123 +11,67 @@
 
 
 
-#include "BinaryWriter.hpp"
+#include "BinaryReader.hpp"
 #include "JsonVariables.hpp"
 
 
 
-using namespace std;
-
-
-
 namespace ParserJson
-{    
-    class JsonWriter
+{
+    class JsonReader
     {
         private:
 
-            struct User
+            BinaryReader binaryReader;
+
+        public:
+
+            JsonReader(std::istream& stream) : binaryReader(stream) {}
+
+        public:
+
+            void read()
             {
-                string  gender;
-                string    name;
-                string surname;
-                int        age;
-                string   email;
-                string country;
-            };
-    
+                while (binaryReader.good())
+                {
+                    uint8_t type = binaryReader.getUInt8();  // Leer el tipo del elemento (OBJECT, ARRAY, etc.)
+                }
+            }
+
         private:
 
-            BinaryWriter binaryWriter;
-
-            User user;
-
-        public:
-
-            JsonWriter(std::ostream& stream) : binaryWriter(stream) {};
-
-            void WriteUser();
-
-        public:
-
-            bool Null()
+            void readValue()
             {
-                return true;
-            }
+                uint8_t type = binaryReader.getUInt8();
 
-            bool Bool(bool boolean)
-            {
-                return true;
-            }
-
-            bool Int(int integer32)
-            {
-                return true;
-            }
-
-            bool Uint(unsigned uInteger32)
-            {
-                return true;
-            }
-
-            bool Int64(int64_t integer64)
-            {
-                return true;
-            }
-
-            bool Uint64(uint64_t uInteger64)
-            {
-                return true;
-            }
-
-            bool Double(double doubleNum)
-            {
-                return true;
-            }
-
-            bool String(const char* str, size_t length, bool copy)
-            {
-                return true;
-            }
-
-            bool StartObject()
-            {
-                return true;
-            }
-
-            bool Key(const char* str, size_t length, bool copy)
-            {
-                return true;
-            }
-
-            bool EndObject(size_t memberCount)
-            {
-                return true;
-            }
-
-            bool StartArray()
-            {
-                return true;
-            }
-
-            bool EndArray(size_t elementCount)
-            {
-                return true;
-            }
-
-            bool RawNumber(const char* str, size_t length, bool copy)
-            {
-                return true;
+                switch (type)
+                {
+                case STRING:
+                {
+                    std::string value = binaryReader.getString();
+                    std::cout << "\"" << value << "\"";
+                    break;
+                }
+                case NUMBER:
+                {
+                    uint32_t number = binaryReader.getUInt32();
+                    std::cout << number;
+                    break;
+                }
+                case BOOLEAN:
+                {
+                    uint8_t value = binaryReader.getUInt8();
+                    std::cout << (value ? "true" : "false");
+                    break;
+                }
+                case NULLVALUE:
+                {
+                    std::cout << "null";
+                    break;
+                }
+                default:
+                    std::cerr << "ERROR: unexpected value. " << int(type) << std::endl;
+                }
             }
     };
-
-    inline void JsonWriter::WriteUser()
-    {
-        binaryWriter.put<string> (user. gender);
-        binaryWriter.put<string> (user.   name);
-        binaryWriter.put<string> (user.surname);
-        binaryWriter.put<uint8_t>(user.    age);
-        binaryWriter.put<string> (user.  email);
-        binaryWriter.put<string> (user.country);
-    }
 };
