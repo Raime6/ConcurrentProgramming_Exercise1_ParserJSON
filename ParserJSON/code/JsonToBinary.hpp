@@ -61,17 +61,17 @@ namespace ParserJson
 
             User user;
 
-            bool      isResults;
-            bool       isGender;
-            bool         isName;
-            bool        isFirst;
-            bool         isLast;
-            bool          isDob;
-            bool          isAge;
-            bool        isEmail;
-            bool      isCountry;
+            bool isResults;
+            bool isGender;
+            bool isName;
+            bool isFirst;
+            bool isLast;
+            bool isDob;
+            bool isAge;
+            bool isEmail;
+            bool isCountry;
 
-            int     objectCount;
+            int  objectCount;
             int  objectKeyCount;
 
         public:
@@ -94,7 +94,7 @@ namespace ParserJson
 
             void WriteUser();
 
-            void toLowerCase(string & str)
+            void ToLowerCase(string & str)
             {
                 transform(str.begin(), str.end(), str.begin(), ::tolower);
             }
@@ -178,7 +178,7 @@ namespace ParserJson
             bool Key(const char* str, size_t length, bool copy)
             {
                 string  key(str);
-                toLowerCase(key);
+                ToLowerCase(key);
 
                 if (isResults)
                 {
@@ -226,11 +226,11 @@ namespace ParserJson
 
     inline void JsonToBinary::WriteUser()
     {
-        binaryWriter.put<string> (user. gender);
-        binaryWriter.put<string> (user.   name);
+        binaryWriter.put<string> (user.gender );
+        binaryWriter.put<string> (user.name   );
         binaryWriter.put<string> (user.surname);
-        binaryWriter.put<uint8_t>(user.    age);
-        binaryWriter.put<string> (user.  email);
+        binaryWriter.put<uint8_t>(user.age    );
+        binaryWriter.put<string> (user.email  );
         binaryWriter.put<string> (user.country);
     }
 };
